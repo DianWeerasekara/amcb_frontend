@@ -57,6 +57,9 @@ const CreateAircraftType = React.lazy(() => import('./views/aircraft_types/creat
 //Aircrafts 
 const RegisterAircraft = React.lazy(() => import('./views/aircrafts/create/RegisterAircraft'))
 
+//Line Maintenance
+const CreateLineType = React.lazy(() => import('./views/line_type/create/CreateLineType'))
+
 const Widgets = React.lazy(() => import('./views/widgets/Widgets'))
 
 const routes = [
@@ -107,6 +110,7 @@ const routes = [
   { path: '/users/create', name: 'Create user', element: CreateUser },
   { path: '/aircraft_types/createAt', name: 'Create Aircraft type', element: CreateAircraftType },
   { path: '/aircrafts/create', name: 'Create Aircraft', element: RegisterAircraft },
+  { path: '/line_type/create', name: 'Create Aircraft', element: CreateLineType },
 ]
 
 export default routes

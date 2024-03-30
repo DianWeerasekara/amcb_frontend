@@ -86,6 +86,28 @@ const _nav = [
   },
   {
     component: CNavTitle,
+    name: 'Maintenance',
+  },
+  {
+    component: CNavGroup,
+    name: 'Maintenance Types',
+    to: '/line_type',
+    icon: <CIcon icon={cilCursor} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Create maintenance types',
+        to: '/line_type/create',
+      },
+      {
+        component: CNavItem,
+        name: 'Manage maintenance types',
+        to: '/line_type/manage',
+      }
+    ],
+  },
+  {
+    component: CNavTitle,
     name: 'Theme',
   },
   {
