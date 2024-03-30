@@ -46,6 +46,33 @@ const _nav = [
   },
   {
     component: CNavTitle,
+    name: 'Aircrafts',
+  },
+  {
+    component: CNavGroup,
+    name: 'Aircraft Types',
+    to: '/aircraft_types',
+    icon: <CIcon icon={cilCursor} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Create aircraft types',
+        to: '/aircraft_types/createAt',
+      },
+      {
+        component: CNavItem,
+        name: 'Manage aircraft types',
+        to: '/aircraft_types/manage',
+      },
+      {
+        component: CNavItem,
+        name: 'Dropdowns',
+        to: '/buttons/dropdowns',
+      },
+    ],
+  },
+  {
+    component: CNavTitle,
     name: 'Theme',
   },
   {
