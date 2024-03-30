@@ -90,19 +90,37 @@ const _nav = [
   },
   {
     component: CNavGroup,
-    name: 'Maintenance Types',
+    name: 'Line Types',
     to: '/line_type',
     icon: <CIcon icon={cilCursor} customClassName="nav-icon" />,
     items: [
       {
         component: CNavItem,
-        name: 'Create maintenance types',
+        name: 'Create line types',
         to: '/line_type/create',
       },
       {
         component: CNavItem,
-        name: 'Manage maintenance types',
+        name: 'Manage line types',
         to: '/line_type/manage',
+      }
+    ],
+  },
+  {
+    component: CNavGroup,
+    name: 'Maintenance Types',
+    to: '/maintenance_type',
+    icon: <CIcon icon={cilCursor} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Create maintenance types',
+        to: '/maintenance_type/create',
+      },
+      {
+        component: CNavItem,
+        name: 'Manage maintenance types',
+        to: '/maintenance_type/manage',
       }
     ],
   },
