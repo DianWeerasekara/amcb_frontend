@@ -15,11 +15,13 @@ const CreateAircraftType = () => {
                     </CRow>
                     <br />
                     <CRow>
-                        <CFormTextarea
-                            id="decription"
-                            label="Description"
-                            rows={3}
-                        ></CFormTextarea>
+                        <CCol xs>
+                            <CFormTextarea
+                                id="decription"
+                                label="Description"
+                                rows={3}
+                            ></CFormTextarea>
+                        </CCol>
                     </CRow>
                     <br />                    
                     <CRow>
