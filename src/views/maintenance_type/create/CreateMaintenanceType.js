@@ -12,6 +12,7 @@ const CreateMaintenanceType = () => {
                         <CCol xs>
                         <CFormSelect 
                                 aria-label="Default select example"
+                                label = "Line Type"
                                 options={[
                                     'Line Type',
                                     { label: 'Admin', value: '1' },
@@ -21,7 +22,16 @@ const CreateMaintenanceType = () => {
                             />
                         </CCol>
                         <CCol xs>
-                            <CFormInput placeholder="Maintenence Type Name" aria-label="Maintenence Type Name"/>
+                            <CFormInput label="Maintenence Type Name" placeholder="Maintenence Type Name" aria-label="Maintenence Type Name"/>
+                        </CCol>
+                    </CRow>
+                    <br />
+                    <CRow>
+                        <CCol xs>
+                            <CFormInput label="Frequency of Maintenance" placeholder="Frequency of Maintenance" aria-label="Frequency of Maintenance"/>
+                        </CCol>
+                        <CCol xs>
+                            <CFormInput label="Estimated Duration" placeholder="Estimated Duration" aria-label="Estimated Duration"/>
                         </CCol>
                     </CRow>
                     <br />
@@ -32,6 +42,7 @@ const CreateMaintenanceType = () => {
                     </CRow>
                 </CCardBody>
             </CCard>
+            <br />
         </CContainer>
     )
 }
