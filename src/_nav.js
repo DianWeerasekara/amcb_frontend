@@ -125,6 +125,24 @@ const _nav = [
     ],
   },
   {
+    component: CNavGroup,
+    name: 'Maintenance Records',
+    to: '/maintenance_records',
+    icon: <CIcon icon={cilCursor} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Create maintenance record',
+        to: '/maintenance_record/create',
+      },
+      {
+        component: CNavItem,
+        name: 'Manage maintenance types',
+        to: '/maintenance_type/manage',
+      }
+    ],
+  },
+  {
     component: CNavTitle,
     name: 'Theme',
   },
