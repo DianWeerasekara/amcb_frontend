@@ -1,7 +1,7 @@
 import React from "react";
 import {CRow, CCol, CFormInput, CContainer, CCard, CCardBody, CFormSelect, CButton, CFormTextarea } from "@coreui/react";
 
-const CreateMaintenanceType = () => {
+const CreateMaintenanceRecord = () => {
     return(
         <CContainer md>
             <CCard>
@@ -100,4 +100,4 @@ const CreateMaintenanceType = () => {
     )
 }
 
-export default CreateMaintenanceType;
+export default CreateMaintenanceRecord;
