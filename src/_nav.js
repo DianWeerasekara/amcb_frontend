@@ -143,6 +143,24 @@ const _nav = [
     ],
   },
   {
+    component: CNavGroup,
+    name: 'After Flight Records',
+    to: '/flight_records',
+    icon: <CIcon icon={cilCursor} customClassName="nav-icon" />,
+    items: [
+      {
+        component: CNavItem,
+        name: 'Create after flight record',
+        to: '/flight_records/create',
+      },
+      {
+        component: CNavItem,
+        name: 'Manage maintenance types',
+        to: '/maintenance_type/manage',
+      }
+    ],
+  },
+  {
     component: CNavTitle,
     name: 'Theme',
   },
