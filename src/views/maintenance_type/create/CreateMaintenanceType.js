@@ -1,5 +1,5 @@
 import React from "react";
-import {CRow, CCol, CFormInput, CContainer, CCard, CCardBody, CFormSelect, CButton } from "@coreui/react";
+import {CRow, CCol, CFormInput, CContainer, CCard, CCardBody, CFormSelect, CButton, CFormTextarea } from "@coreui/react";
 
 const CreateMaintenanceType = () => {
     return(
@@ -32,6 +32,23 @@ const CreateMaintenanceType = () => {
                         </CCol>
                         <CCol xs>
                             <CFormInput label="Estimated Duration" placeholder="Estimated Duration" aria-label="Estimated Duration"/>
+                        </CCol>
+                    </CRow>
+                    <br />
+                    <CRow>
+                        <CCol xs>
+                            <CFormTextarea
+                                id="decription"
+                                label="Description"
+                                rows={3}
+                            ></CFormTextarea>
+                        </CCol>
+                        <CCol xs>
+                            <CFormTextarea
+                                id="decription"
+                                label="Components Involved"
+                                rows={3}
+                            ></CFormTextarea>
                         </CCol>
                     </CRow>
                     <br />
