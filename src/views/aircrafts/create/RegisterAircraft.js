@@ -21,22 +21,61 @@ const RegisterAircraft = () => {
                             />
                         </CCol>
                         <CCol xs>
-                            <CFormInput placeholder="Aircraft Model" aria-label="Aircraft Model"/>
+                            <CFormInput placeholder="Manufacturer" aria-label="Manufacturer"/>
                         </CCol>                        
                     </CRow>
                     <br />
                     <CRow>
                         <CCol xs>
-                            <CFormInput placeholder="Registration number" aria-label="Registration number"/>
+                            <CFormInput placeholder="Serial number" aria-label="Serial number"/>
                         </CCol>
                         <CCol xs>
-                            <CFormInput placeholder="Assinged unit" aria-label="Assinged unit"/>
+                            <CFormInput placeholder="Registration number" aria-label="Registration number"/>
                         </CCol>
                     </CRow>
                     <br />
                     <CRow>
                         <CCol xs>
-                            <CFormInput placeholder="Hobbs reading" aria-label="Hobbs reading"/>
+                            <CFormInput placeholder="Manufacturer Date" aria-label="Manufacturer Date" type="date"/>
+                        </CCol>
+                        <CCol xs>
+                            <CFormInput placeholder="Purchase Date" aria-label="Purchase Date" type="date"/>
+                        </CCol>
+                    </CRow>
+                    <br />
+                    <CRow>
+                        <CCol xs>
+                            <CFormInput placeholder="Last Maintenance Date (at the date of purchase)" aria-label="Last Maintenance Date" type="date"/>
+                        </CCol>
+                        <CCol xs>
+                            <CFormInput placeholder="Total Flight Hours (at the date of purchase)" aria-label="Total Flight Hours"/>
+                        </CCol>
+                    </CRow>
+                    <br />
+                    <CRow>
+                        <CCol xs>
+                            <CFormInput placeholder="Total Flight Cycle (at the date of purchase)" aria-label="Total Flight Cycle" />
+                        </CCol>
+                        <CCol xs>
+                            <CFormInput placeholder="Total Flight Hours (at the date of purchase)" aria-label="Total Flight Hours"/>
+                        </CCol>
+                    </CRow>
+                    <br />
+                    <CRow>
+                        <CCol xs>
+                            <CFormInput placeholder="Maximum Takeoff Weight" aria-label="Maximum Takeoff Weight" />
+                        </CCol>
+                        <CCol xs>
+                            <CFormInput placeholder="Fuel Capacity" aria-label="Fuel Capacity"/>
+                        </CCol>
+                    </CRow>
+                    <br />
+                    <CRow>
+                        <CCol xs>
+                            <CFormInput placeholder="Seating Capacity" aria-label="Seating Capacity"/>
+                        </CCol>
+                        <CCol xs>
+                            <CFormInput placeholder="Engine Information" aria-label="Engine Information"/>
                         </CCol>
                     </CRow>
                     <br />
@@ -47,6 +86,7 @@ const RegisterAircraft = () => {
                     </CRow>
                 </CCardBody>
             </CCard>
+            <br />
         </CContainer>
     )
 }
