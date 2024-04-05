@@ -9,7 +9,13 @@ const RegisterAircraft = () => {
                     <h3>Aircraft Registration</h3>
                     <br />
                     <CRow>
-                    <CCol xs> 
+                        <CCol xs>
+                            <CFormInput placeholder="Aircraft Model" aria-label="Aircraft Model"/>
+                        </CCol>
+                    </CRow>
+                    <br />
+                    <CRow>
+                        <CCol xs> 
                             <CFormSelect 
                                 aria-label="Aircraft Type"
                                 options={[
