@@ -53,6 +53,7 @@ const CreateUser = React.lazy(() => import('./views/users/create/CreateUser'))
 
 //Aircraft Types
 const CreateAircraftType = React.lazy(() => import('./views/aircraft_types/createAt/CreateAircraftType'))
+const ManageAircraftTypes = React.lazy(() => import('./views/aircraft_types/manage/ManageAircraftTypes'))
 
 //Aircrafts 
 const RegisterAircraft = React.lazy(() => import('./views/aircrafts/create/RegisterAircraft'))
@@ -118,6 +119,7 @@ const routes = [
   { path: '/widgets', name: 'Widgets', element: Widgets },
   { path: '/users/create', name: 'Create user', element: CreateUser },
   { path: '/aircraft_types/createAt', name: 'Create Aircraft type', element: CreateAircraftType },
+  { path: '/aircraft_types/manage', name: 'Create Aircraft type', element: ManageAircraftTypes },
   { path: '/aircrafts/create', name: 'Create Aircraft', element: RegisterAircraft },
   { path: '/line_type/create', name: 'Create Line Type', element: CreateLineType },
   { path: '/maintenance_type/create', name: 'Create Maintenance Type', element: CreateMaintenanceType },
