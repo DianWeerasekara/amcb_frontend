@@ -57,6 +57,7 @@ const ManageAircraftTypes = React.lazy(() => import('./views/aircraft_types/mana
 
 //Aircrafts 
 const RegisterAircraft = React.lazy(() => import('./views/aircrafts/create/RegisterAircraft'))
+const ManageAircrafts = React.lazy(() => import('./views/aircrafts/manage/ManageAircrafts'))
 
 //Line Maintenance
 const CreateLineType = React.lazy(() => import('./views/line_type/create/CreateLineType'))
@@ -121,6 +122,7 @@ const routes = [
   { path: '/aircraft_types/createAt', name: 'Create Aircraft type', element: CreateAircraftType },
   { path: '/aircraft_types/manage', name: 'Create Aircraft type', element: ManageAircraftTypes },
   { path: '/aircrafts/create', name: 'Create Aircraft', element: RegisterAircraft },
+  { path: '/aircraft/manage', name: 'Manage Aircraft', element: ManageAircrafts },
   { path: '/line_type/create', name: 'Create Line Type', element: CreateLineType },
   { path: '/maintenance_type/create', name: 'Create Maintenance Type', element: CreateMaintenanceType },
   { path: '/maintenance_record/create', name: 'Create Maintenance Record', element: CreateMaintenanceRecords },

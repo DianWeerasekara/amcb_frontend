@@ -80,7 +80,7 @@ const _nav = [
       {
         component: CNavItem,
         name: 'Manage aircraft types',
-        to: '/aircraft_types/manage',
+        to: '/aircraft/manage',
       }
     ],
   },
