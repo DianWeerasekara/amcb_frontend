@@ -137,8 +137,8 @@ const _nav = [
       },
       {
         component: CNavItem,
-        name: 'Manage maintenance types',
-        to: '/maintenance_type/manage',
+        name: 'Manage maintenance records',
+        to: '/maintenance_records/manage',
       }
     ],
   },
