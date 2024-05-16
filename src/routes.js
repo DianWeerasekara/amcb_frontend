@@ -73,6 +73,7 @@ const ManageMaintenanceRecords = React.lazy(() => import('./views/maintenance_re
 
 //After Flight Records
 const CreateFlightRecord = React.lazy(() => import('./views/flight_records/create/CreateFlightRecord'))
+const ManageFlighRecords = React.lazy(() => import('./views/flight_records/manage/ManageFlightRecords'))
 
 const Widgets = React.lazy(() => import('./views/widgets/Widgets'))
 
@@ -133,6 +134,7 @@ const routes = [
   { path: '/maintenance_record/create', name: 'Create Maintenance Record', element: CreateMaintenanceRecords },
   { path: '/maintenance_records/manage', name: 'Manage Maintenance Record', element: ManageMaintenanceRecords },
   { path: '/flight_records/create', name: 'Create Flight Records', element: CreateFlightRecord },
+  { path: '/afterFlight/manage', name: 'Create Flight Records', element: ManageFlighRecords },
 ]
 
 export default routes
