@@ -155,8 +155,8 @@ const _nav = [
       },
       {
         component: CNavItem,
-        name: 'Manage maintenance types',
-        to: '/maintenance_type/manage',
+        name: 'After Flight Records',
+        to: '/afterFlight/manage',
       }
     ],
   },
