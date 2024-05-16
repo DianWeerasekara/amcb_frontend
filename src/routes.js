@@ -65,6 +65,7 @@ const ManageLineTypes = React.lazy(() => import('./views/line_type/manage/Manage
 
 //Maintenenace types
 const CreateMaintenanceType = React.lazy(() => import('./views/maintenance_type/create/CreateMaintenanceType'))
+const ManageMaintenanceType = React.lazy(() => import('./views/maintenance_type/manage/ManageMaintenanceType'))
 
 //Maintenance Records
 const CreateMaintenanceRecords = React.lazy(() => import('./views/maintenance_record/create/CreateMaintenanceRecord'));
@@ -127,6 +128,7 @@ const routes = [
   { path: '/line_type/create', name: 'Create Line Type', element: CreateLineType },
   { path: '/line_type/manage', name: 'Manage Line Type', element: ManageLineTypes },
   { path: '/maintenance_type/create', name: 'Create Maintenance Type', element: CreateMaintenanceType },
+  { path: '/maintenance_type/manage', name: 'Manage Maintenance Type', element: ManageMaintenanceType },
   { path: '/maintenance_record/create', name: 'Create Maintenance Record', element: CreateMaintenanceRecords },
   { path: '/flight_records/create', name: 'Create Flight Records', element: CreateFlightRecord },
 ]
