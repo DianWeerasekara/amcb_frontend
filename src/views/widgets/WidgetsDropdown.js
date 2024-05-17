@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import PropTypes from 'prop-types'
 
 import {
@@ -14,10 +14,52 @@ import { getStyle } from '@coreui/utils'
 import { CChartBar, CChartLine } from '@coreui/react-chartjs'
 import CIcon from '@coreui/icons-react'
 import { cilArrowBottom, cilArrowTop, cilOptions } from '@coreui/icons'
+import axios from 'axios'
 
 const WidgetsDropdown = (props) => {
   const widgetChartRef1 = useRef(null)
   const widgetChartRef2 = useRef(null)
+
+  const [totAircraft, setTotaircraft] = useState([]);
+  const [totUsers, setTotUsers] = useState([]);
+  const [totMaintenanceRecords, setTotMaintenanceRecords] = useState([]);
+  const [totMaintenaceTypes, setTotMaintenaceTypes] = useState([]);
+
+  const fetchTotAircraft = async() => {
+    try {
+      const response = await axios.get("http://localhost:9000/api/numberof-flights");
+      setTotaircraft(response.data.totalAircrafts)
+    } catch (error) {
+      console.error("Error fetching aircraft types:", error);
+    }
+  }
+
+  const fetchTotUsers = async() => {
+    try {
+      const response2 = await axios.get("http://localhost:9000/api/number-users");
+      setTotUsers(response2.data.totalUsers)
+    } catch (error) {
+      console.error("Error fetching aircraft types:", error);
+    }
+  }
+
+  const fetchTotMaintenanceRecords = async() => {
+    try {
+      const response3 = await axios.get("http://localhost:9000/api/numberof-records");
+      setTotMaintenanceRecords(response3.data.totalNumberofRecords)
+    } catch (error) {
+      console.error("Error fetching aircraft types:", error);
+    }
+  }
+
+  const fetchTotMaintenaceTypes = async() => {
+    try {
+      const response4 = await axios.get("http://localhost:9000/api/tot-maintenaceTypes");
+      setTotMaintenaceTypes(response4.data.totalNumberOfMaintenancetypes);
+    } catch (error) {
+      console.error("Error fetching aircraft types:", error);
+    }
+  }
 
   useEffect(() => {
     document.documentElement.addEventListener('ColorSchemeChange', () => {
@@ -35,6 +77,11 @@ const WidgetsDropdown = (props) => {
         })
       }
     })
+
+    fetchTotAircraft();
+    fetchTotUsers();
+    fetchTotMaintenanceRecords();
+    fetchTotMaintenaceTypes();
   }, [widgetChartRef1, widgetChartRef2])
 
   return (
@@ -44,13 +91,10 @@ const WidgetsDropdown = (props) => {
           color="primary"
           value={
             <>
-              26K{' '}
-              <span className="fs-6 fw-normal">
-                (-12.4% <CIcon icon={cilArrowBottom} />)
-              </span>
+              {totAircraft}
             </>
           }
-          title="Users"
+          title="Total Aircrafts"
           action={
             <CDropdown alignment="end">
               <CDropdownToggle color="transparent" caret={false} className="text-white p-0">
@@ -134,13 +178,10 @@ const WidgetsDropdown = (props) => {
           color="info"
           value={
             <>
-              $6.200{' '}
-              <span className="fs-6 fw-normal">
-                (40.9% <CIcon icon={cilArrowTop} />)
-              </span>
+              {totUsers}
             </>
           }
-          title="Income"
+          title="Total Users"
           action={
             <CDropdown alignment="end">
               <CDropdownToggle color="transparent" caret={false} className="text-white p-0">
@@ -223,13 +264,10 @@ const WidgetsDropdown = (props) => {
           color="warning"
           value={
             <>
-              2.49%{' '}
-              <span className="fs-6 fw-normal">
-                (84.7% <CIcon icon={cilArrowTop} />)
-              </span>
+              {totMaintenanceRecords}
             </>
           }
-          title="Conversion Rate"
+          title="Maintenance Records"
           action={
             <CDropdown alignment="end">
               <CDropdownToggle color="transparent" caret={false} className="text-white p-0">
@@ -295,13 +333,10 @@ const WidgetsDropdown = (props) => {
           color="danger"
           value={
             <>
-              44K{' '}
-              <span className="fs-6 fw-normal">
-                (-23.6% <CIcon icon={cilArrowBottom} />)
-              </span>
+              {totMaintenaceTypes}
             </>
           }
-          title="Sessions"
+          title="Number of Maintenace Types"
           action={
             <CDropdown alignment="end">
               <CDropdownToggle color="transparent" caret={false} className="text-white p-0">
